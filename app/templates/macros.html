@@ -1,0 +1,19 @@
+{% macro displayEvent(event_list) %}{% for event in event_list %}
+      <div class="col-sm-4">
+            <div class="card">
+            <!--Card content-->
+                  <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">{{event.event_name|capitalize}}</h4>
+                        <!--Text-->
+                        <p class="card-text">Location:{{event.location}}</p>
+                        <p class="card-text">Cost: Ksh {{event.cost}}</p>
+                        <p class="card-text">{{event.date}}</p>
+                        
+                        <p class="card-text">Description: {{event.description}}</p>
+                        <a href="#" class="btn btn-primary">Button</a>
+                  </div>
+            </div>
+      </div>
+ {% endfor %}
+ {% endmacro %}

@@ -10,8 +10,8 @@
                         <p class="card-text">Cost: Ksh {{event.cost}}</p>
                         <p class="card-text">{{event.date}}</p>
                         
-                        <p class="card-text">Description: {{event.description}}</p>
-                        <a href="#" class="btn btn-primary">Button</a>
+                        <p class="card-text">Description: {{event.description|safe}}</p>
+                        <a href="/event/{{event.id}}" class="btn btn-primary">Book</a>
                   </div>
             </div>
       </div>

@@ -3,6 +3,43 @@
 
 {% block content %}
 <div class="container">
-      {{ wtf.quick_form(booking_form) }}
+      <div class="row">
+            <div class="col-sm-6">
+                  <h2>Personal Details</h2>
+                  <div class="booking-form">
+                        {{ wtf.quick_form(booking_form) }}
+                  </div>
+            </div>
+            <div class="col-sm-6">
+            <div class="card">
+                  <!--Card image-->
+                  <div class="view overlay hm-white-slight">
+                        <h2 class="card-title text-center">{{event.event_name|capitalize}}</h2>
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%28131%29.jpg" class="img-fluid" alt="">
+                        <a>
+                              <div class="mask"></div>
+                        </a>
+                  </div>
+                  <!--/.Card image-->
+                  <!--Card content-->
+                  <div class="card-body">
+                        <!--Social shares button-->
+                        
+                        <!--Title-->
+                        <hr>
+                        <!--Text-->
+                        <p class="card-text"><b>Event:</b> {{event.description}}</p>
+                        <p class="card-text"><b>Location:</b> {{event.location}}</p>
+                        <p class="card-text"><b>Price:</b> {{event.cost}}/=</p>
+                        <p class="card-text"><b>Date:</b> {{event.date}}</p>
+                        <a href="#" class="black-text d-flex flex-row-reverse">
+                              <button class="btn btn-secondary"><a class="activator"><i class="fa fa-share-alt" style="font-size:36px;color:black"></i> Share</a></button>
+                        </a>
+                  </div>
+                  <!--/.Card content-->
+                  </div>
+                  </div>
+      </div>
 </div>
+
 {% endblock %}
